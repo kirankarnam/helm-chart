@@ -41,7 +41,6 @@ spec:
         {{ $key }}: {{ $value | quote }}
         {{- end }}
     spec:
-      schedulerName: "podgroup-scheduler"
       terminationGracePeriodSeconds: 30
       {{- if .Values.serviceAccount.enabled }}
       serviceAccountName: {{ template "podinfo.serviceAccountName" . }}
