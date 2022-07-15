@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "podinfo.fullname" . }}
+  name: 1234567
   namespace: ngcc-user
   labels:
     {{- include "podinfo.labels" . | nindent 4 }}
