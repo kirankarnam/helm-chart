@@ -41,12 +41,13 @@ spec:
         {{ $key }}: {{ $value | quote }}
         {{- end }}
     spec:
+      schedulerName: "podgroup-scheduler"
       terminationGracePeriodSeconds: 30
       {{- if .Values.serviceAccount.enabled }}
       serviceAccountName: {{ template "podinfo.serviceAccountName" . }}
       {{- end }}
       containers:
-        - name: {{ .Chart.Name }}
+        - name: 1234567
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- if .Values.securityContext }}
